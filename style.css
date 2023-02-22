@@ -8,6 +8,10 @@ body {
   text-align:justify;
 }
 
+h1 {
+margin-top: 0px;
+}
+
 div.lm {
   margin-left:1em;
 }
