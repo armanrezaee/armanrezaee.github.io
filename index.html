@@ -90,35 +90,25 @@
             line-height: 1.6;
         }
 
-        /* Affiliates box with colored left border */
+        /* Affiliates inline text */
         .affiliates {
-            margin: 20px 0;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #3182ce;
+            margin: 12px 0;
+            color: #4a5568;
+            font-size: 0.95em;
             line-height: 1.8;
         }
 
-        /* "Affiliates:" label styling */
         .affiliates strong {
-            display: inline;
-            margin-right: 8px;
             color: #2d3748;
-            font-size: 0.95em;
+            margin-right: 6px;
         }
 
-        /* Links in affiliates section */
         .affiliates a {
             color: #3182ce;
             text-decoration: none;
-            transition: color 0.2s ease;
-            white-space: nowrap;
         }
 
-        /* Hover effect for affiliate links */
         .affiliates a:hover {
-            color: #2c5aa0;
             text-decoration: underline;
         }
 
@@ -183,43 +173,36 @@
             font-size: 1.05em;
         }
 
-        /* Bio text box with background */
-        .bio-text {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
+        /* Bio text - plain, smaller, and less prominent */
+        .bio-text p {
+            font-size: 0.95em;
+            color: #718096;
         }
 
-        /* Individual publication card */
+        /* Individual publication entry */
         .publication {
-            margin-bottom: 35px;
-            padding: 25px;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        /* Hover effect - adds shadow and slides right slightly */
-        .publication:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-            border-color: #cbd5e0;
-            transform: translateX(5px);
+        .publication:last-child {
+            border-bottom: none;
         }
 
         /* Author names in publication */
         .publication-authors {
-            color: #4a5568;
-            margin-bottom: 8px;
-            font-size: 1em;
+            color: #718096;
+            margin-bottom: 4px;
+            font-size: 0.95em;
         }
 
         /* Publication title */
         .publication-title {
             font-weight: 600;
             color: #2d3748;
-            margin-bottom: 8px;
-            font-size: 1.1em;
+            margin-bottom: 4px;
+            font-size: 1.05em;
             line-height: 1.5;
         }
 
@@ -227,57 +210,56 @@
         .publication-venue {
             font-style: italic;
             color: #718096;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
+            font-size: 0.95em;
         }
 
-        /* Container for publication links (PDF, published version, etc) */
+        /* Publication links as simple inline text links */
         .publication-links {
             display: flex;
-            gap: 12px;
+            gap: 0;
             flex-wrap: wrap;
-            margin-top: 12px;
+            margin-top: 6px;
+            font-size: 0.9em;
         }
 
-        /* Styled link buttons for publications */
         .publication-links a {
             color: #3182ce;
             text-decoration: none;
-            font-size: 0.95em;
-            padding: 6px 14px;
-            background: #ebf8ff;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-            border: 1px solid transparent;
         }
 
-        /* Hover effect - inverts colors */
         .publication-links a:hover {
-            background: #3182ce;
-            color: white;
-            border-color: #3182ce;
+            text-decoration: underline;
         }
 
-        /* Work-in-progress section with yellow theme */
+        .publication-links a + a::before {
+            content: " · ";
+            color: #a0aec0;
+        }
+
+        /* Work-in-progress entries */
         .wip {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #fffbeb;
-            border-radius: 8px;
-            border-left: 4px solid #f59e0b;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .wip:last-child {
+            border-bottom: none;
         }
 
         /* Title for work-in-progress items */
         .wip-title {
             font-weight: 600;
             color: #2d3748;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             font-size: 1.05em;
         }
 
-        /* Status text (e.g., "Working paper coming soon") */
+        /* Status text */
         .wip-status {
-            color: #92400e;
-            font-size: 0.95em;
+            color: #718096;
+            font-size: 0.9em;
             font-style: italic;
         }
 
@@ -314,10 +296,7 @@
                 justify-content: center;
             }
 
-            /* Disable hover slide effect on mobile */
-            .publication:hover {
-                transform: none;
-            }
+            /* nothing to override for mobile now */
         }
     </style>
 </head>
@@ -460,6 +439,17 @@
                     <a href="pdfs/Legitimacy_Oct2019.pdf">PDF</a>
                 </div>
             </div>
+
+            <div class="publication">
+                <div class="publication-authors">Sarojini Hirshleifer, Mustafa Naseem, Agha Ali Raza, and Arman Rezaee</div>
+                <div class="publication-title">The spread of (mis)information: A social media experiment in Pakistan</div>
+                <div class="publication-venue">Forthcoming, Journal of Development Economics</div>
+                <div class="publication-links">
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304387826000672?DGCID=STMJ_220042_AUTH_SERV_PPUB&lid=jua9g5tkojjo&utm_campaign=STMJ_220042_AUTH_SERV_PPUB&utm_content=07bab9e4-c31e-408b-afa5-1c9ca0f269ca&utm_medium=email&utm_source=braze&utm_term=07bab9e4-c31e-408b-afa5-1c9ca0f269ca">Published version</a>
+                    <a href="https://escholarship.org/uc/item/9v98h6zt#main">CEGA Working Paper 213</a>
+                    <a href="https://ucigcc.org/publication/the-spread-of-misinformation-a-social-media-experiment-in-pakistan/">UCIGCC Working Paper</a>
+                </div>
+            </div>
         </section>
 
         <section>
@@ -486,16 +476,6 @@
 
         <section>
             <h2>Working Papers</h2>
-
-            <div class="publication">
-                <div class="publication-authors">Sarojini Hirshleifer, Mustafa Naseem, Agha Ali Raza, and Arman Rezaee</div>
-                <div class="publication-title">The spread of (mis)information: A social media experiment in Pakistan</div>
-                <div class="publication-venue">Under review</div>
-                <div class="publication-links">
-                    <a href="https://escholarship.org/uc/item/9v98h6zt#main">CEGA Working Paper 213</a>
-                    <a href="https://ucigcc.org/publication/the-spread-of-misinformation-a-social-media-experiment-in-pakistan/">UCIGCC Working Paper</a>
-                </div>
-            </div>
 
             <div class="publication">
                 <div class="publication-authors">Isra Imtiaz, Shotaro Nakamura, Sanval Nasim, and Arman Rezaee</div>
