@@ -1,0 +1,8 @@
+# Private CV source files — never publish to the site
+_cv-source/
+
+# macOS junk
+.DS_Store
+
+# Local editor/tooling config — not part of the site
+.claude/
